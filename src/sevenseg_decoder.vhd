@@ -38,7 +38,7 @@ end sevenseg_decoder;
 
 
 architecture Behavioral of sevenseg_decoder is
-
+    
 begin
     with i_Hex select
     o_seg_n <=  "1000000" when x"0",
@@ -57,6 +57,6 @@ begin
             "0100001" when x"D",
             "0000110" when x"E",
             "0001110" when x"F",
-            "0000" when others; --if basys3 reads wrong, fix truth table here
+            "0000000" when others; --if basys3 reads wrong, fix truth table here
 
 end Behavioral;
