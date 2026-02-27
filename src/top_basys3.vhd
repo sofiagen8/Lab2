@@ -75,7 +75,7 @@ entity top_basys3 is
 
 	);
 end top_basys3;
- ---editing file to see why nothing will commit
+
 architecture top_basys3_arch of top_basys3 is 
 	
   -- declare the component of your top-level design
