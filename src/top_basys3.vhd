@@ -96,17 +96,8 @@ begin
 	--	Port map: wire your component up to the switches and seven-segment display cathodes
 	-----------------------------------------------------	
 	port map(
-	    i_Hex(0) => sw(0),
-        i_Hex(1) => sw(1),
-        i_Hex(2) => sw(2),
-        i_Hex(3) => sw(3),
-        o_seg_n(6) => seg(6),
-        o_seg_n(5) => seg(5),
-        o_seg_n(4) => seg(4),
-        o_seg_n(3) => seg(3),
-        o_seg_n(2) => seg(2),
-        o_seg_n(1) => seg(1),
-        o_seg_n(0) => seg(0)
+	    i_Hex => sw,
+        o_seg_n => seg
 	   );
 	-- CONCURRENT STATEMENTS ----------------------------
 	
