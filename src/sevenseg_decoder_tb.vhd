@@ -50,10 +50,11 @@ begin
     test_process : process
     begin 
     sw <= x"0"; wait for 10 ns;
-	       assert (seg(0) = '1' and seg(6) = '0') report "no worky" severity failure;
+	       assert (seg(0) = '0' and seg(6) = '1') report "no worky" severity failure;
     sw <= x"A"; wait for 10 ns;
-	       assert (seg(0) = '1' and seg(3) = '0') report "no worky" severity failure;
+	       assert (seg(0) = '0' and seg(3) = '1') report "no worky" severity failure;
 	sw <= x"E"; wait for 10 ns;
-	       assert (seg(3) = '1' and seg(1) = '0') report "no worky" severity failure;  
+	       assert (seg(3) = '0' and seg(1) = '1') report "no worky" severity failure;  
+    wait;
     end process;
 end Behavioral;
